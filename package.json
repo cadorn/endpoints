@@ -62,5 +62,20 @@
     "is-my-json-valid": "^2.12.0",
     "kapow": "^1.0.0",
     "lodash": "^3.9.3"
+  },
+  "@github.com~sourcemint~sm.sync~0/map": {
+    "sources": {
+        "github.com~cadorn~endpoints~0": {
+            "master": {
+                "uri": "git://git@github.com:cadorn/endpoints.git#(master)"
+            }
+        }
+    },
+    "mappings": {
+        ".": "github.com~cadorn~endpoints~0/master"
+    },
+    "@github.com~sourcemint~sm.expand~0/locations": {
+        "sources": ".deps/{uid}/source/vcs/{rev}"
+    }
   }
 }
