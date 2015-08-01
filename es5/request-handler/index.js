@@ -142,10 +142,10 @@ var RequestHandler = (function () {
     var data = request.body.data;
     if (data && data.id) {
       return store.byId(model, data.id).then(_libThrow_if_model2['default']).then(function () {
-        return store.create(model, data);
+        return store.create(model, data, request);
       });
     } else {
-      return store.create(model, data);
+      return store.create(model, data, request);
     }
   };
 
