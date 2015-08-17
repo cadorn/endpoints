@@ -190,7 +190,7 @@ var RequestHandler = (function () {
   RequestHandler.prototype.update = function update(request) {
     var store = this.store;
     return store.byId(this.model, request.params.id).then(_libThrow_if_no_model2['default']).then(function (model) {
-      return store.update(model, request.body.data);
+      return store.update(model, request.body.data, request);
     });
   };
 
